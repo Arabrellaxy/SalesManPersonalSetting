@@ -1,0 +1,56 @@
+PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+  - Masonry (1.1.0)
+  - MBProgressHUD (1.1.0)
+  - MJRefresh (3.1.15.7)
+  - SalesManDataStorage (0.2.0)
+  - SalesManGlobal (0.6.0):
+    - MBProgressHUD
+  - SalesManNetwork (0.9.0):
+    - AFNetworking
+  - SalesManPersonalSetting (0.1.0):
+    - Masonry
+    - MJRefresh
+    - SalesManDataStorage
+    - SalesManGlobal
+    - SalesManNetwork
+
+DEPENDENCIES:
+  - Masonry
+  - MJRefresh
+  - SalesManDataStorage
+  - SalesManGlobal
+  - SalesManNetwork
+  - SalesManPersonalSetting (from `../`)
+
+EXTERNAL SOURCES:
+  SalesManPersonalSetting:
+    :path: ../
+
+SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
+  SalesManDataStorage: 840a9e70e446d22cea8f270f8d415b990226b2e3
+  SalesManGlobal: df77526ff87148785f472107f8dc2cb3382a3996
+  SalesManNetwork: 29e5413d2173909c01b253ea9a52ff22e02a9dc1
+  SalesManPersonalSetting: 6966f42be313308dc56a6452cd2ffcebd27fb3df
+
+PODFILE CHECKSUM: 8539e72289068cbb466f99980712263f80f15cc2
+
+COCOAPODS: 1.4.0

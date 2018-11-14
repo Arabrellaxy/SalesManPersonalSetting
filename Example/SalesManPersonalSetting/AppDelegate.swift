@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import  SalesManPersonalSetting
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -16,6 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let bundle1 = Bundle.init(for: SWPersonalTableViewController.classForCoder())
+        let path = bundle1.path(forResource: "SalesManPersonalSetting", ofType: "bundle")!
+        let bundle:Bundle = Bundle.init(path:path)!
+        let vc = UIStoryboard.init(name: "Main", bundle: bundle).instantiateInitialViewController()
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.rootViewController = vc
+        self.window?.makeKeyAndVisible()
         return true
     }
 

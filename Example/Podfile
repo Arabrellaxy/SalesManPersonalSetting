@@ -1,8 +1,14 @@
 use_frameworks!
+source 'https://github.com/Arabrellaxy/XYSpecs.git'
+source 'https://github.com/CocoaPods/Specs.git'
 
 target 'SalesManPersonalSetting_Example' do
   pod 'SalesManPersonalSetting', :path => '../'
-
+  pod 'SalesManNetwork'
+  pod 'SalesManGlobal'
+  pod 'SalesManDataStorage'
+  pod 'Masonry'
+  pod 'MJRefresh'
   target 'SalesManPersonalSetting_Tests' do
     inherit! :search_paths
 

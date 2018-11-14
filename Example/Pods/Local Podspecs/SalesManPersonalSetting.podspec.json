@@ -1,0 +1,44 @@
+{
+  "name": "SalesManPersonalSetting",
+  "version": "0.1.0",
+  "summary": "A short description of SalesManPersonalSetting.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Arabrellaxy/SalesManPersonalSetting",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Arabrellaxy": "xiey@sailwish.com"
+  },
+  "source": {
+    "git": "https://github.com/Arabrellaxy/SalesManPersonalSetting.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "SalesManPersonalSetting/Classes/**/*",
+  "resource_bundles": {
+    "SalesManPersonalSetting": [
+      "SalesManPersonalSetting/Assets/*"
+    ]
+  },
+  "dependencies": {
+    "SalesManNetwork": [
+
+    ],
+    "SalesManGlobal": [
+
+    ],
+    "SalesManDataStorage": [
+
+    ],
+    "Masonry": [
+
+    ],
+    "MJRefresh": [
+
+    ]
+  }
+}

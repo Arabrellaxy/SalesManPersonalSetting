@@ -1,0 +1,6 @@
+framework module SalesManPersonalSetting {
+  umbrella header "SalesManPersonalSetting-umbrella.h"
+
+  export *
+  module * { export * }
+}
