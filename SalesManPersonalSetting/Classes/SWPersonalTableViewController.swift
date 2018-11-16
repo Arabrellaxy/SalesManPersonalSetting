@@ -95,7 +95,12 @@ extension SWPersonalTableViewController {
         SalesManAFNetworkAPI.shareInstance.requestPersonalData(userId: userID!) { [unowned self](resultArray) in
             let apiReformer = APIReformer.init(responseArray: resultArray as! [NSDictionary])
             let header:SWPersonalHeader =  self.tableView.tableHeaderView as! SWPersonalHeader
-            header.fillDataWith(result: apiReformer.userInfo())
+            let (valueArray,success,message) = apiReformer.userInfo()
+            if success {
+                header.fillDataWith(result: valueArray!)
+            } else{
+                self.view.showTextHud(text: message!, autoHide: true)
+            }
             self.tableView.mj_header.isHidden = true
         }
     }

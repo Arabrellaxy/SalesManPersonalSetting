@@ -21,12 +21,12 @@ class SWPersonalHeader: UITableViewHeaderFooterView {
     override func awakeFromNib() {
         self.standlizeStyle()
     }
-    public func fillDataWith(result:(String,String,String,String,String,String)){
-        self.nameLabel.text = result.1
-        self.phoneLabel.text = result.2
-        self.workNoLabel.text = result.3
-        self.sumLabel.text = result.4
-        self.countLabel.text = result.5
+    public func fillDataWith(result:[String]){
+        self.nameLabel.text = result[1]
+        self.phoneLabel.text = result[2]
+        self.workNoLabel.text = result[3]
+        self.sumLabel.text = result[4]
+        self.countLabel.text = result[5]
     }
 }
 
