@@ -14,7 +14,7 @@ public class SWPersonalTableViewController: UITableViewController {
     let cellIdentifier = ["SeparatedCell","ScrollableCell","normalCell"]
     override public func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.navigationController?.navigationBar.setBackgroundImage(UIImage.init(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage.init()
         self.edgesForExtendedLayout = .top
@@ -36,7 +36,7 @@ public class SWPersonalTableViewController: UITableViewController {
         self.tableView.mj_header = header
         self.tableView.mj_header.beginRefreshing()
     }
-
+    
     override public func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -46,7 +46,7 @@ public class SWPersonalTableViewController: UITableViewController {
 //MARK:Action
 extension SWPersonalTableViewController {
     @objc func settingAction(){
-    
+        
     }
 }
 //MARK:TABLEVIEW DELEGATE & DATASOURCE
@@ -96,12 +96,12 @@ extension SWPersonalTableViewController {
             let apiReformer = APIReformer.init(responseArray: resultArray as! [NSDictionary])
             let header:SWPersonalHeader =  self.tableView.tableHeaderView as! SWPersonalHeader
             let (valueArray,success,message) = apiReformer.userInfo()
-            if success {
-                header.fillDataWith(result: valueArray!)
-            } else{
+            header.fillDataWith(result: valueArray!)
+            
+            if !success {
                 self.view.showTextHud(text: message!, autoHide: true)
             }
-            self.tableView.mj_header.isHidden = true
+            self.tableView.mj_header.endRefreshing()
         }
     }
 }
