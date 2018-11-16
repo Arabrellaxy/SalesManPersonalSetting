@@ -24,7 +24,7 @@ class APIReformer: NSObject {
         let balanclSuccess = balanceDic.object(forKey: "status") as! Bool
         
         let customerCountDic:NSDictionary = self.responseArray[2]
-        let customerCount = "\(customerCountDic.object(forKey: "data")!)"
+        let customerCount = "\(customerCountDic.object(forKey: "data") ?? 0)"
         let customerCountSuccess = customerCountDic.object(forKey: "status") as! Bool
         
         guard let _ = userDic else {
