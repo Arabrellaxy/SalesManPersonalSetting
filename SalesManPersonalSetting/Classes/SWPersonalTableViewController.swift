@@ -91,8 +91,8 @@ extension SWPersonalTableViewController {
 //MARK Private
 extension SWPersonalTableViewController {
     func requestData()  {
-        let userID = SWDataStorage.init().userID
-        SalesManAFNetworkAPI.shareInstance.requestPersonalData(userId: userID!) { [unowned self](resultArray) in
+        let userID:String? = SWDataStorage.init().userID
+        SalesManAFNetworkAPI.shareInstance.requestPersonalData(userId: userID ?? "") { [unowned self](resultArray) in
             let apiReformer = APIReformer.init(responseArray: resultArray as! [NSDictionary])
             let header:SWPersonalHeader =  self.tableView.tableHeaderView as! SWPersonalHeader
             let (valueArray,success,message) = apiReformer.userInfo()
